@@ -1,0 +1,57 @@
+<!--Capstone Checklist-->
+<!--
+    save for later page [1/1]
+    items on gallery must have comment , like, save for later []
+    save for later should alert to how many items are saved []
+    save for later should make use of session storage []
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>First Web Page</title>
+    <script src="https://kit.fontawesome.com/7cb8196603.js" crossorigin="anonymous"></script>
+</head>
+<body onload="pageLoad()">
+    <div class="pageContainer">
+        <!--Header area for smaller title and fixed navbar-->
+        <header>
+            <!--need a more catchy name-->
+            <div class="headerBar">
+                <h3 class="topHeader">MYMEALPLANNER</h3>  
+                <nav class="navbarExpand">
+                    <a class="link" href="index.html">Home</a>
+                    <a class="link" href="features.html">Features</a>
+                    <a class="link" href="contact.html">Contact</a>
+                    <a class="link active" href="gallery.html">Gallery</a>
+                    <a class="link" href="#registerLogin">Register or Login</a>
+                </nav>
+            </div>
+        </header>
+
+        <!--main section greyed out image, h1 headline, brief summar text and link button-->
+        <main class="mainCol">
+            <div id="empty">
+                <h3 id="emptyText">You're saved items is empty</h3>
+                <div>
+                    <ul id="bookmarks">
+
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        
+        
+        <!--Footer for privacy policy, copyright-->
+        <footer class="footContainer">
+            <p>&copy; 2022 My Future Company Name, Ltd. &middot; <a href="https://www.privacypolicies.com/generic/" target="_blank">Privacy Policy</a></p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

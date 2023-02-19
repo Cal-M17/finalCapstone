@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7cb8196603.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="pageContainer">
+<!--Header area for smaller title and fixed navbar-->
+        <header>
+            <!--need a more catchy name-->
+            <div class="headerBar">
+                <h3 class="topHeader">MYMEALPLANNER</h3>  
+                <nav class="navbarExpand">
+                    <a class="link" href="index.html">Home</a>
+                    <a class="link" href="features.html">Features</a>
+                    <a class="link active" href="contact.html">Contact</a>
+                    <a class="link" href="gallery.html">Gallery</a>
+                    <a class="link" href="#registerLogin">Register or Login</a>
+                </nav>
+            </div>
+        </header>
+<!---->
+        <main>
+            <div class="contact">
+                <h3>We'd love to hear from you!</h3>
+                <p>Drop us a message using the form below. Alternatively, email me directly at <a href="mailto:cmilapps17@gmail.com?subject=Mail from our website">cmilapps17@gmail.com.</a></p>
+                <form>
+                    <div class="row">
+                        <div class="quartCol">
+                            <label for="fName">First Name: </label>
+                        </div>
+                        <div class="tripCol">
+                            <input type="text" id="fName" name="firstName"  placeholder="John">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="quartCol">
+                            <label for="emailAddy">Email Address: </label>
+                        </div>
+                        <div class="tripCol">
+                            <input type="text" id="emailAddy" name="emailAddress"  placeholder="john123@email.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="quartCol">
+                            <label for="message">Your Message: </label>
+                        </div>
+                        <div class="tripCol">
+                            <textarea id="message" name="message" placeholder="What would you like to say?" rows="10" cols="30"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+            
+        </main>
+        
+<!--Footer for privacy policy, copyright-->
+        <footer class="footContainer">
+            <p>&copy; 2022 My Future Company Name, Ltd. &middot; <a href="https://www.privacypolicies.com/generic/" target="_blank">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>

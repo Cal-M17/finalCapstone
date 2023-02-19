@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7cb8196603.js" crossorigin="anonymous"></script>
+
+    <title>First Web Page</title>
+</head>
+<body>
+
+    <div class="pageContainer">
+<!--Header area for smaller title and fixed navbar-->
+        <header>
+            <!--need a more catchy name-->
+            <div class="headerBar">
+                <h3 class="topHeader">MYMEALPLANNER</h3>  
+                <nav class="navbarExpand">
+                    <a class="link" href="index.html">Home</a>
+                    <a class="link active" href="features.html">Features</a>
+                    <a class="link" href="contact.html">Contact</a>
+                    <a class="link" href="gallery.html">Gallery</a>
+                    <a class="link" href="#registerLogin">Register or Login</a>
+                </nav>
+            </div>
+        </header>
+<!--This section will have some rows of the features available-->
+        <main>
+            <div class="featureContainer">
+
+                <div class="featuresRow">
+                    <div class="wideColumn">
+                        <h2 class="featureHeading">
+                            The Meal Planner.
+                            <span class="featureIcon" id="mealPlanner"> <i class="fa-solid fa-heart" id="likeButton" onclick="likeItem(this)"></i> <i class="fa-solid fa-floppy-disk" id="saveButton" onclick="saveItem(this)"></i></span>
+                        </h2>
+                        <p class="featureSummary">
+                            Nothing makes eating healthier easier than knowing what you are going to eat in advance. Plan your meals for 
+                            the week ahead with meals in your cookbook.
+                        </p>
+                        <p class="featureList">
+                            <ul>
+                                <li>Plan for breakfast, second breakfast, lunch, dinner, snacks or create your own!</li>
+                                <li>Toggle macro and calorie information</li>
+                                <li>Drag and drop meals into the planner</li>
+                                <li>See your weekly eats at a glance</li>
+                            </ul>
+                        </p>
+                        <div id="MealPlannerCommentBox">
+                            <textarea id="mealPlannerComment" placeholder="Say something nice!"></textarea>
+                            <button class="addComment" onclick="addComment(this)">Comment</button>
+                            <div id="allMealPlannerComments">
+                                <ul id="MealPlannerCommentList">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="narrowColumn">
+                        <picture>
+                            <img class="placeholderImage" src="images/calendar.png" alt="placeholder for planner image">
+                        </picture>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="featuresRow">
+                    <div class="wideColumn">
+                        <h2 class="featureHeading">
+                            The Cookbook.
+                            <span class="featureIcon" id="cookbook"> <i class="fa-solid fa-heart" id="likeButton" onclick="likeItem(this)"></i> <i class="fa-solid fa-floppy-disk" id="saveButton" onclick="saveItem(this)"></i></span>
+                        </h2>
+                        <p class="featureSummary">
+                            Create and store your own recipes or import from blogs around the net. When used altogether, the Cookbook will feed 
+                            into the meal planner and help populate your shopping list.
+                        </p>
+                        <p class="featureList">
+                            <ul>
+                                <li>Create or import your own recipes</li>
+                                <li>Search the in built recipe selection for inspiration</li>
+                                <li>Offline access to recipes</li>
+                                <li>Cooking mode to keep your screen on and set timers</li>
+                            </ul>
+                        </p>
+                        <div class="cookbookCommentBox">
+                            <textarea id="cookbookComment" placeholder="Say something nice!"></textarea>
+                            <button class="addComment" onclick="addComment(this)">Comment</button>
+                            <div id="allCookbookComments">
+                                <ul id="cookBookCommentList">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="narrowColumn">
+                        <picture>
+                            <img class="placeholderImage" src="images/cookbook.png" alt="placeholder for cookbook image">
+                        </picture>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="featuresRow" id="shoppingList">
+                    <div class="wideColumn">
+                        <h2 class="featureHeading">
+                            The Shopping List.
+                            <span class="featureIcon" id="shoppingList"><i class="fa-solid fa-heart" id="likeButton" onclick="likeItem(this)"></i> <i class="fa-solid fa-floppy-disk" id="saveButton" onclick="saveItem(this)"></i></span>
+                        </h2>
+                        <p class="featureSummary">
+                            Keep track of what you need to prepare all your meals with a shopping list pulled from the ingredients in your chosen meals. 
+                        </p>
+                        <p class="featureList">
+                            <ul>
+                                <li>Organise your food into product groups</li>
+                                <li>quick add for items you need to buy but aren't going to eat</li>
+                                <li>Offline access to your list</li>
+                                <li>Sort your list by where you are going to buy your groceries</li>
+                            </ul>
+                        </p>
+                        <div id="shoppingListcommentBox">
+                            <textarea id="shoppingListComment" placeholder="Say something nice!"></textarea>
+                            <button class="addComment" onclick="addComment(this)">Comment</button>
+                            <div id="allShoppingListComments">
+                                <ul id="shoppingListCommentList">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="narrowColumn">
+                        <picture>
+                            <img class="placeholderImage" src="images/check-list.png" alt="placeholder for cookbook image">
+                        </picture>
+                    </div>
+                </div>
+                <hr class="divider">
+<!--Features compatibility table-->
+                <div class="featuresRow">
+                    <div class="extraWideColumn">
+                        <h2 class="featureHeading">
+                            Feature Compatibility
+                            <span class="featureIcon"></span>
+                        </h2>
+                        <table class="centered">
+                            <tr>
+                                <th>OS</th>
+                                <th><img class="tableImg" src="images/calendar.png" alt="Meal Planner"></th>
+                                <th><img class="tableImg" src="images/cookbook.png" alt="Cookbook"></th>
+                                <th><img class="tableImg" src="images/check-list.png" alt="Shopping List"></th>
+                            </tr>
+                            <tr>
+                                <th><i class="fa-brands fa-apple"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                            </tr>
+                            <tr>
+                                <th><i class="fa-brands fa-android"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                            </tr>
+                            <tr>
+                                <th><i class="fa-brands fa-firefox-browser"></i> <i class="fa-brands fa-chrome"></i> <i class="fa-brands fa-edge"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                                <th><i class="fa-solid fa-check"></i></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr class="divider">
+<!--Radio button form for new features-->
+                <div class="featuresRow">
+                    <div class="extraWideColumn">
+                        <h2 class="featureHeading">
+                            Future Features
+                            <span class="featureIcon">What Features would you like to see added?</span>
+                        </h2>
+                        <div class="featureVote">
+                        <form>
+                            <input type="radio" id="pantry" name="futureFeatures">
+                            <label for="pantry">Virtual Pantry to track your long life items</label><br>
+                            <input type="radio" id="exercise" name="futureFeatures">
+                            <label for="exercise">Exercise programming tips</label><br>
+                            <input type="radio" id="mobility" name="futureFeatures">
+                            <label for="mobility">Tips on improving Mobility</label><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <hr class="footerDivider">
+            </div>
+            
+        </main>
+        
+<!--Footer for privacy policy, copyright-->
+        <footer class="footContainer">
+            <p>&copy; 2022 My Future Company Name, Ltd. &middot; <a href="https://www.privacypolicies.com/generic/" target="_blank">Privacy Policy</a></p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
