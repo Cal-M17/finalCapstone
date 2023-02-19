@@ -10,7 +10,7 @@ This is a mockup of a meal planner website highlighting the key features of a li
 
 | Title | Description |
 |-------|-------------|
-| Download | How to run the website|
+| (Download)[https://github.com/flyingbison17/finalCapstone/tree/master#download-instructions] | How to run the website|
 | Usage | What to do after installing |
 | Credits | Cheers! |
 
